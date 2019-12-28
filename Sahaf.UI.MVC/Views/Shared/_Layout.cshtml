@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>@ViewBag.Title | Sahaf.Com </title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    @Html.Partial("_PartialHead")
+    <!-- breadcrumbs Area Start -->
+    <div class="breadcrumbs-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="breadcrumbs">
+                        <h2>@ViewBag.Title</h2>
+                        <ul class="breadcrumbs-list">
+                            <li>
+                                <a title="Return to Home" href="@Url.Action("Index","Home")">ANASAYFA</a>
+                            </li>
+                            <li>@ViewBag.Title</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- breadcrumbs Area End-->
+
+    @RenderBody()
+
+    @Html.Partial("_PartialFooter")
+    </body>
+</html>

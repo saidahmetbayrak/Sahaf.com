@@ -1,0 +1,115 @@
+﻿
+@{
+    ViewBag.Title = "MyInbox";
+    Layout = "~/Views/Shared/_NestedLayout.cshtml";
+}
+
+<div class="check-out-area">
+    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingOne">
+                <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <span><i class="fa fa-envelope"></i></span>
+                        Gelen Mesajlar
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Gönderen</th>
+                                        <th scope="col">Konu</th>
+                                        <th scope="col">Tarih</th>
+                                        <th scope="col">Mesaj</th>
+                                        <th scope="col">Mesaj Detay</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td>MNG111</td>
+                                        <td><input type="button" value="Detay" class="btn btn-default"></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>Jacob</td>
+                                        <td>Thornton</td>
+                                        <td>MNG222</td>
+                                        <td><input type="button" value="Detay" class="btn btn-default"></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>Larry</td>
+                                        <td>the Bird</td>
+                                        <td>MNG333</td>
+                                        <td><input type="button" value="Detay" class="btn btn-default"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingTwo">
+                <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <span><i class="fa fa-paper-plane"></i></span>
+                        Giden Mesajlar
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Alıcı</th>
+                                        <th scope="col">Konu</th>
+                                        <th scope="col">Tarih</th>
+                                        <th scope="col">Mesaj</th>
+                                        <th scope="col">Mesaj Detay</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td>MNG111</td>
+                                        <td><input type="button" value="Detay" class="btn btn-default"></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>Jacob</td>
+                                        <td>Thornton</td>
+                                        <td>MNG222</td>
+                                        <td><input type="button" value="Detay" class="btn btn-default"></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>Larry</td>
+                                        <td>the Bird</td>
+                                        <td>MNG333</td>
+                                        <td><input type="button" value="Detay" class="btn btn-default"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
