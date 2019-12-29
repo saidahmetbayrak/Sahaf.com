@@ -22,7 +22,7 @@ namespace Sahaf.Model.Entities
         public short Stock { get; set; }//Stok
         public string PublisherName { get; set; }//YayinEvi
         public int PublishYear { get; set; }//YayinYılı
-        public string Description { get; set; }//ACıklama
+        public string Description { get; set; }//Acıklama
         public string AdvertİmgUrl { get; set; }//ResimYolu
 
 
@@ -30,7 +30,7 @@ namespace Sahaf.Model.Entities
         public int UserID { get; set; }
         public int CategoryID { get; set; }
 
-        //Mapping
+        
         public virtual User User { get; set; }
         public virtual Category Category { get; set; }
         public virtual List<OrderDetail> OrderDetails { get; set; }

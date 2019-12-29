@@ -19,7 +19,7 @@ namespace Sahaf.Model.Entities
         //Foreign Key
         public int UserID { get; set; }
 
-        //Mapping
+       
         public virtual User User { get; set; }
         public virtual Advert Advert { get; set; }
         public virtual List<OrderDetail> OrderDetails { get; set; }

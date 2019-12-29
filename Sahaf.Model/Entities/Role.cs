@@ -12,8 +12,8 @@ namespace Sahaf.Model.Entities
     {
         public Roles Roles { get; set; }//Rol
 
-        //Mapping
-        public virtual User User { get; set; }
+
+        public virtual List<User> Users { get; set; }
     }
 
 }

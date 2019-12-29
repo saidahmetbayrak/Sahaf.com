@@ -14,7 +14,7 @@ namespace Sahaf.Model.Entities
 
         //Foreign Key
 
-        //Mapping
+       
         public virtual List<Advert> Adverts { get; set; }
     }
 }

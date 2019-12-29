@@ -27,7 +27,7 @@ namespace Sahaf.Model.Entities
         //Foreign Key
         public int RoleID { get; set; }
 
-        //Mapping
+        
         public virtual Role Role { get; set; }
         public virtual List<Order> Orders { get; set; }
     }

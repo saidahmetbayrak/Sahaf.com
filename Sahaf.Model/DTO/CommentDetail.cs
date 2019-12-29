@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Sahaf.Model.DTO
 {
-    public class CommentDetail
+    public class CommentDetail:BaseEntity
     {
         //Foreign Key
         public int AdvertID { get; set; }

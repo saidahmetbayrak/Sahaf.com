@@ -16,7 +16,7 @@ namespace Sahaf.Model.Entities
         //Foreign Key
        
 
-        //Mapping
+        
          
     }
 }

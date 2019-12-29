@@ -20,7 +20,7 @@ namespace Sahaf.Model.Entities
         public int UserID { get; set; }//Alıcı
         public int UserIDS { get; set; }//Gönderen
 
-        //Mapping
+        
         public virtual User User { get; set; }
         public virtual User UserS { get; set; }
     }
