@@ -12,5 +12,6 @@ namespace Sahaf.DAL.Concrete
 {
    public class AdvertRepository:EFRepositoryBase<Advert,SahafDbContext>,IAdvertDAL
     {
+        //Hello
     }
 }

@@ -12,7 +12,7 @@ namespace Sahaf.DAL.Concrete
     {
         public CommentDetailMapping()
         {
-            HasKey(a => new { a.AdvertID, a.CommentID, a.UserID });
+            //HasKey(a => new { a.AdvertID, a.CommentID, a.UserID });
         }
     }
 }

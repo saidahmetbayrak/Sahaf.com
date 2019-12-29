@@ -12,7 +12,7 @@ namespace Sahaf.DAL.Concrete
 {
    public class SahafDbContext:DbContext
     {
-        public SahafDbContext():base("server=.;Database=sahafDB;Integrated Security=True;")
+        public SahafDbContext():base(@"server=DESKTOP-TT3KGQ8\SQLEXPRESS;Database=sahafDB;UID=sa;PWD=12345;")
         {
 
         }
@@ -32,9 +32,19 @@ namespace Sahaf.DAL.Concrete
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Configurations.Add(new OrderDetailMapping());
-            modelBuilder.Configurations.Add(new CommentDetailMapping());
-            modelBuilder.Configurations.Add(new UserFavoriteDetailMapping());
+            //modelBuilder.Configurations.Add(new OrderDetailMapping());
+            //modelBuilder.Configurations.Add(new CommentDetailMapping());
+            //modelBuilder.Configurations.Add(new UserFavoriteDetailMapping());
+
+            modelBuilder.Entity<Message>()
+            .HasRequired<User>(s => s.User)
+            .WithMany(g => g.Messages)
+            .HasForeignKey<int>(s => s.RMessageID);
+
+            modelBuilder.Entity<Message>()
+            .HasRequired<User>(s => s.User)
+            .WithMany(g => g.Messages)
+            .HasForeignKey<int>(s => s.SMessageID);
 
             modelBuilder.Properties().Where(a => a.PropertyType == typeof(DateTime)).Configure(a => a.HasColumnType("datetime2"));
         }

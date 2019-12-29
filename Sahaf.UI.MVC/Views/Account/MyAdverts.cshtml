@@ -1,0 +1,199 @@
+﻿
+@{
+    ViewBag.Title = "İlanlarım";
+    Layout = "~/Views/Shared/_NestedLayout.cshtml";
+}
+
+<div class="row">
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link active" href="#">Mevcut İlanlarım</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Sattıklarım</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">İlan Ekle</a>
+        </li>
+    </ul>
+</div>
+<div class="row">
+    <div class="shop-tab-area">
+        <div class="shop-tab-list">
+            <div class="shop-tab-pill pull-left">
+                <ul>
+                    <!-- <li class="" id="left"><a data-toggle="pill" href="#home"><i class="fa fa-th"></i><span>Grid</span></a></li> -->
+                    <li class="active"><a data-toggle="pill" href="#menu1"><i class="fa fa-th-list"></i><span>List</span></a></li>
+                </ul>
+            </div>
+            <div class="shop-tab-pill pull-right">
+                <ul>
+                    <li class="product-size-deatils">
+                        <div class="show-label">
+                            <label>Show : </label>
+                            <select>
+                                <option value="10" selected="selected">10</option>
+                                <option value="09">09</option>
+                                <option value="08">08</option>
+                                <option value="07">07</option>
+                                <option value="06">06</option>
+                            </select>
+                        </div>
+                    </li>
+                    <li class="product-size-deatils">
+                        <div class="show-label">
+                            <label><i class="fa fa-sort-amount-asc"></i>Sort by : </label>
+                            <select>
+                                <option value="position" selected="selected">Position</option>
+                                <option value="Name">Name</option>
+                                <option value="Price">Price</option>
+                            </select>
+                        </div>
+                    </li>
+                    <li class="shop-pagination"><a href="#">1</a></li>
+                    <li class="shop-pagination"><a href="#">2</a></li>
+                    <li class="shop-pagination"><a href="#">3</a></li>
+                    <li class="shop-pagination"><a href="#">4</a></li>
+                    <li class="shop-pagination"><a href="#">5</a></li>
+
+                    <li class="shop-pagination"><a href="#"><i class="fa fa-caret-right"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="tab-content">
+            <div id="menu1" class="tab-pane fade active in">
+                <div class="row">
+                    <div class="single-shop-product">
+                        <div class="col-xs-12 col-sm-5 col-md-4">
+                            <div class="left-item">
+                                <a href="single-product.html" title="East of eden">
+                                    <img src="http://placehold.jp/250x250.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-7 col-md-8">
+                            <div class="deal-product-content">
+                                <h4>
+                                    <a href="single-product.html" title="East of eden">East of eden</a>
+                                </h4>
+                                <div class="product-price">
+                                    <span class="new-price">$ 140.00</span>
+                                    <span class="old-price">$ 120.00</span>
+                                </div>
+                                <div class="list-rating-icon">
+                                    <i class="fa fa-star icolor"></i>
+                                    <i class="fa fa-star icolor"></i>
+                                    <i class="fa fa-star icolor"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <p>Faded short sleeves t-shirt with high neckline. Soft and stretchy material for a comfortable fit. Accessorize with a straw hat and you're ready for summer!</p>
+                                <div class="availability">
+                                    <span>In stock</span>
+                                    <span><a href="cart.html">Add to cart</a></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="single-shop-product">
+                        <div class="col-xs-12 col-sm-5 col-md-4">
+                            <div class="left-item">
+                                <a href="single-product.html" title="People of the book">
+                                    <img src="http://placehold.jp/250x250.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-7 col-md-8">
+                            <div class="deal-product-content">
+                                <h4>
+                                    <a href="single-product.html" title="People of the book">People of the book</a>
+                                </h4>
+                                <div class="product-price">
+                                    <span class="new-price">$ 140.00</span>
+                                    <span class="old-price">$ 120.00</span>
+                                </div>
+                                <div class="list-rating-icon">
+                                    <i class="fa fa-star icolor"></i>
+                                    <i class="fa fa-star icolor"></i>
+                                    <i class="fa fa-star icolor"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <p>Faded short sleeves t-shirt with high neckline. Soft and stretchy material for a comfortable fit. Accessorize with a straw hat and you're ready for summer!</p>
+                                <div class="availability">
+                                    <span>In stock</span>
+                                    <span><a href="cart.html">Add to cart</a></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="single-shop-product">
+                        <div class="col-xs-12 col-sm-5 col-md-4">
+                            <div class="left-item">
+                                <a href="single-product.html" title="The secret letter">
+                                    <img src="http://placehold.jp/250x250.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-7 col-md-8">
+                            <div class="deal-product-content">
+                                <h4>
+                                    <a href="single-product.html" title="The secret letter">The secret letter</a>
+                                </h4>
+                                <div class="product-price">
+                                    <span class="new-price">$ 140.00</span>
+                                    <span class="old-price">$ 120.00</span>
+                                </div>
+                                <div class="list-rating-icon">
+                                    <i class="fa fa-star icolor"></i>
+                                    <i class="fa fa-star icolor"></i>
+                                    <i class="fa fa-star icolor"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <p>Faded short sleeves t-shirt with high neckline. Soft and stretchy material for a comfortable fit. Accessorize with a straw hat and you're ready for summer!</p>
+                                <div class="availability">
+                                    <span>In stock</span>
+                                    <span><a href="cart.html">Add to cart</a></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="single-shop-product">
+                        <div class="col-xs-12 col-sm-5 col-md-4">
+                            <div class="left-item">
+                                <a href="single-product.html" title="Lone some dove">
+                                    <img src="http://placehold.jp/250x250.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-7 col-md-8">
+                            <div class="deal-product-content">
+                                <h4>
+                                    <a href="single-product.html" title="Lone some dove">Lone some dove</a>
+                                </h4>
+                                <div class="product-price">
+                                    <span class="new-price">$ 140.00</span>
+                                    <span class="old-price">$ 120.00</span>
+                                </div>
+                                <div class="list-rating-icon">
+                                    <i class="fa fa-star icolor"></i>
+                                    <i class="fa fa-star icolor"></i>
+                                    <i class="fa fa-star icolor"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <p>Faded short sleeves t-shirt with high neckline. Soft and stretchy material for a comfortable fit. Accessorize with a straw hat and you're ready for summer!</p>
+                                <div class="availability">
+                                    <span>In stock</span>
+                                    <span><a href="cart.html">Add to cart</a></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -11,13 +11,13 @@ namespace Sahaf.Model.DTO
     public class CommentDetail:BaseEntity
     {
         //Foreign Key
-        public int AdvertID { get; set; }
-        public int UserID { get; set; }
-        public int CommentID { get; set; }
+        public int? AdvertID { get; set; }
+        public int? UserID { get; set; }
+        public int? CommentID { get; set; }
 
-        //Mapping
-        public virtual List<Advert> Adverts { get; set; }
-        public virtual List<User> Users { get; set; }
-        public virtual List<Comment> Comments { get; set; }
+        //
+        public virtual Advert Advert { get; set; }
+        public virtual User User { get; set; }
+        public virtual Comment Comment { get; set; }
     }
 }

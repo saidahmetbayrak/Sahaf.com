@@ -34,6 +34,8 @@ namespace Sahaf.Model.Entities
         public virtual User User { get; set; }
         public virtual Category Category { get; set; }
         public virtual List<OrderDetail> OrderDetails { get; set; }
+        public virtual List<UserFavoriteDetail> UserFavoriteDetails { get; set; }
+        public virtual List<CommentDetail> CommentDetails { get; set; }
 
 
     }

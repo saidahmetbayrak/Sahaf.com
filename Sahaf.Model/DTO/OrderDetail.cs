@@ -15,11 +15,11 @@ namespace Sahaf.Model.DTO
 
 
         //Foreign Key
-        public int AdvertID { get; set; }
-        public int OrderID { get; set; }
+        public int? AdvertID { get; set; }
+        public int? OrderID { get; set; }
 
-        //Mapping
-        public virtual List<Advert> Adverts { get; set; }
-        public virtual List<Order> Orders { get; set; }
+        //
+        public virtual Advert Advert { get; set; }
+        public virtual Order Order { get; set; }
     }
 }
