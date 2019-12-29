@@ -1,4 +1,5 @@
 ﻿using Sahaf.Core.Entity;
+using Sahaf.Model.DTO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,8 +28,12 @@ namespace Sahaf.Model.Entities
         //Foreign Key
         public int RoleID { get; set; }
 
-        //Mapping
+        //
         public virtual Role Role { get; set; }
         public virtual List<Order> Orders { get; set; }
+        public virtual List<Advert> Adverts { get; set; }
+        public virtual List<UserFavoriteDetail> FavoriteDetails { get; set; }
+        public virtual List<CommentDetail> CommentDetails { get; set; }
+        public virtual List<Message> Messages { get; set; }
     }
 }

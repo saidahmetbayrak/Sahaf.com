@@ -8,15 +8,15 @@ using System.Threading.Tasks;
 
 namespace Sahaf.Model.DTO
 {
-   public class UserFavoriteDetail
+   public class UserFavoriteDetail:BaseEntity
     {
         //DTO(Data Transfer )
         //Foreign Key
-        public int AdvertID { get; set; }
-        public int UserID { get; set; }
+        public int? AdvertID { get; set; }
+        public int? UserID { get; set; }
 
-        //Mapping
-        public virtual Advert Advert { get; set; }
+        //
+        public virtual List<Advert> Adverts { get; set; }
         public virtual List<User> Users { get; set; }
     }
 }
