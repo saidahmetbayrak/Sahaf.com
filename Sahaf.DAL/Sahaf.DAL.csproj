@@ -61,14 +61,11 @@
     <Compile Include="Abstract\IUserDAL.cs" />
     <Compile Include="Concrete\AdvertRepository.cs" />
     <Compile Include="Concrete\CategoryRepository.cs" />
-    <Compile Include="Concrete\CommentDetailMapping.cs" />
     <Compile Include="Concrete\CommentRepository.cs" />
     <Compile Include="Concrete\MessageRepository.cs" />
-    <Compile Include="Concrete\OrderDetailMapping.cs" />
     <Compile Include="Concrete\OrderRepository.cs" />
     <Compile Include="Concrete\RoleRepository.cs" />
     <Compile Include="Concrete\SahafDbContext.cs" />
-    <Compile Include="Concrete\UserFavoriteDetailMapping.cs" />
     <Compile Include="Concrete\UserRepository.cs" />
     <Compile Include="Migrations\201912291215362_firstMig.cs" />
     <Compile Include="Migrations\201912291215362_firstMig.designer.cs">

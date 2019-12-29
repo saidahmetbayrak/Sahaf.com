@@ -32,10 +32,20 @@ namespace Sahaf.BLL.Concrete
             return _advertDAL.Get(a => a.ID == entityID);
         }
 
+        public ICollection<Advert> GetAlbumsByCategory(int catID)
+        {
+            return _advertDAL.GetAll(a => a.CategoryID == catID);
+        }
+        public ICollection<Advert> GetLastAddedAllAdverts()
+        {
+            return _advertDAL.GetAll().OrderByDescending(a => a.CreateDate).ToList();
+        }
+
         public ICollection<Advert> GetAll()
         {
             return _advertDAL.GetAll();
         }
+
 
         public void Insert(Advert entity)
         {

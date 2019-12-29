@@ -9,5 +9,7 @@ namespace Sahaf.BLL.Abstract
 {
    public interface IAdvertService:IBaseService<Advert>
     {
+        ICollection<Advert> GetAlbumsByCategory(int catID);
+        ICollection<Advert> GetLastAddedAllAdverts();
     }
 }

@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sahaf.DAL", "Sahaf.DAL\Saha
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sahaf.BLL", "Sahaf.BLL\Sahaf.BLL.csproj", "{201CE27D-D2A6-4B48-94EE-5879508A18E6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sahaf.UI.MVC", "Sahaf.UI.MVC\Sahaf.UI.MVC.csproj", "{0F8D4C48-4710-4BEC-A219-9FA8750C1E8C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{201CE27D-D2A6-4B48-94EE-5879508A18E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{201CE27D-D2A6-4B48-94EE-5879508A18E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{201CE27D-D2A6-4B48-94EE-5879508A18E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F8D4C48-4710-4BEC-A219-9FA8750C1E8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F8D4C48-4710-4BEC-A219-9FA8750C1E8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F8D4C48-4710-4BEC-A219-9FA8750C1E8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F8D4C48-4710-4BEC-A219-9FA8750C1E8C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

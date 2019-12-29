@@ -32,9 +32,6 @@ namespace Sahaf.DAL.Concrete
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            //modelBuilder.Configurations.Add(new OrderDetailMapping());
-            //modelBuilder.Configurations.Add(new CommentDetailMapping());
-            //modelBuilder.Configurations.Add(new UserFavoriteDetailMapping());
 
             modelBuilder.Entity<Message>()
             .HasRequired<User>(s => s.User)

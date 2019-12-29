@@ -18,12 +18,7 @@ namespace Sahaf.Model.Entities
         public DateTime Date { get; set; }//Tarih
         public string Subject { get; set; }//Konu
 
-
-        ////Foreign Key
-        //public int UserID { get; set; }//Alıcı
-        //public int UserIDS { get; set; }//Gönderen
-
-        
+    
         public virtual User User { get; set; }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using Sahaf.Core.Entity;
+using Sahaf.Model.DTO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,9 +15,9 @@ namespace Sahaf.Model.Entities
 
 
         //Foreign Key
-       
 
-        
-         
+
+        public virtual List<CommentDetail> CommentDetails { get; set; }
+
     }
 }
