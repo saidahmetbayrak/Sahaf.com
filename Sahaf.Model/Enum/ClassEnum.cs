@@ -9,29 +9,29 @@ namespace Sahaf.Model.Enum
 {
    public enum Status
     {
-       New,
-       Old
+       New=1,
+       Old=2
     }
 
     public enum Condition
     {
-        VeryBad,
-        Bad,
-        Normal,
-        Good,
-        VeryGood
+        VeryBad=1,
+        Bad=2,
+        Normal=3,
+        Good=4,
+        VeryGood=5
     }
 
     public enum Payment
     {
-        EFT,
-        CreditCard,
-        Transfer
+        EFT=1,
+        CreditCard=2,
+        Transfer=3
     }
 
     public enum Roles
     {
-        User,
-        Antiquarian
+        User=1,
+        Antiquarian=2
     }
 }
