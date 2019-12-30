@@ -15,6 +15,9 @@ namespace Sahaf.DAL.Concrete
         public SahafDbContext() : base(@"server=DESKTOP-TT3KGQ8\SQLEXPRESS;Database=sahafDB;UID=sa;PWD=12345;")
         {
             //Database.SetInitializer<SahafDbContext>(new MyStrategy());
+
+           // tamam kanka bu bir sıkıntı yok
+           //buraya burak akça kaa'nın pc den yazdı ...
         }
 
         public DbSet<OrderDetail> OrderDetails { get; set; }
