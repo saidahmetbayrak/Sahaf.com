@@ -69,7 +69,8 @@ namespace Sahaf.UI.MVC.App_Start
             kernel.Bind<ICommentService>().To<CommentService>();
             kernel.Bind<IMessageService>().To<MessageService>();
             kernel.Bind<IOrderService>().To<OrderService>();
-            kernel.Bind<IRoleService>().To<IRoleService>();
+            kernel.Bind<IRoleService>().To<RoleService>();
+            kernel.Bind<IUserService>().To<UserService>();
 
             kernel.Load<CustomDALNinjectModule>();
         }        

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Sahaf.BLL.Concrete
 {
-    class RoleService : IRoleService
+    public class RoleService : IRoleService
     {
         public void Delete(Role entity)
         {

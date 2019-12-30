@@ -1,4 +1,5 @@
 ﻿using Sahaf.BLL.Abstract;
+using Sahaf.Model.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,15 +10,9 @@ namespace Sahaf.UI.MVC.Controllers
 {
     public class HomeController : Controller
     {
-        IAdvertService advertService;
-        public HomeController(IAdvertService advert)
-        {
-            advertService = advert;
-        }
         // GET: Home
         public ActionResult Index()
         {
-            var deneme = advertService.GetAll();
             return View();
         }
     }

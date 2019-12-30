@@ -10,14 +10,14 @@ using System.Threading.Tasks;
 
 namespace Sahaf.DAL.Concrete
 {
-   public class SahafDbContext:DbContext
+    public class SahafDbContext : DbContext
     {
-        public SahafDbContext():base(@"server=DESKTOP-TT3KGQ8\SQLEXPRESS;Database=sahafDB;UID=sa;PWD=12345;")
+        public SahafDbContext() : base(@"server=DESKTOP-TT3KGQ8\SQLEXPRESS;Database=sahafDB;UID=sa;PWD=12345;")
         {
-
+            //Database.SetInitializer<SahafDbContext>(new MyStrategy());
         }
 
-        public DbSet<OrderDetail> OrderDetails { get; set; }     
+        public DbSet<OrderDetail> OrderDetails { get; set; }
         public DbSet<CommentDetail> CommentDetails { get; set; }
         public DbSet<UserFavoriteDetail> UserFavoriteDetails { get; set; }
         public DbSet<Advert> Adverts { get; set; }
@@ -27,7 +27,6 @@ namespace Sahaf.DAL.Concrete
         public DbSet<Order> Orders { get; set; }
         public DbSet<Role> Roles { get; set; }
         public DbSet<User> Users { get; set; }
-        
 
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
