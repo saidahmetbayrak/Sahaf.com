@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Sahaf.BLL.Ninject
 {
-    class CustomDALNinjectModule:NinjectModule
+    public class CustomDALNinjectModule:NinjectModule
     {
         public override void Load()
         {
