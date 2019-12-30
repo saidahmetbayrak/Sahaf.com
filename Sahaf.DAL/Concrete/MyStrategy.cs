@@ -553,6 +553,12 @@ namespace Sahaf.DAL.Concrete
 
             #endregion
 
+            context.Adverts.AddRange(advert);
+            context.Users.AddRange(users);
+            context.Categories.AddRange(category);
+            context.Comments.AddRange(comment);
+            context.Messages.AddRange(message);
+            context.Orders.AddRange(order);
 
         }
     }
