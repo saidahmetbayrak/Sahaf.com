@@ -72,7 +72,7 @@
       <DependentUpon>201912291215362_firstMig.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="MyStrategy.cs" />
+    <Compile Include="Concrete\MyStrategy.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

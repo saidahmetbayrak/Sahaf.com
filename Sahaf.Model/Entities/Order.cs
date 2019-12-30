@@ -13,7 +13,7 @@ namespace Sahaf.Model.Entities
     {
         public DateTime OrderDate { get; set; }//SiparişTarihi
         public Payment Payment { get; set; }//ÖdemeŞekli
-        public int ShipperID { get; set; }//RandomClass Create
+        public string ShipperID { get; set; }//RandomClass Create
 
 
         //Foreign Key
