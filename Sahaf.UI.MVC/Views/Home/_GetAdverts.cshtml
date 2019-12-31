@@ -9,7 +9,7 @@
                     <div class="product-wrapper">
                         <a href="#" class="single-banner-image-wrapper">
                             <img alt="" src="~/Content/home-img/featured/1.jpg">
-                            <div class="price"><span>$</span>@item.Price</div>
+                            <div class="price"><span>&#8378;</span>@item.Price</div>
 
                         </a>
                         <div class="product-description">
@@ -28,7 +28,9 @@
                         </div>
                     </div>
                     <div class="banner-bottom text-center">
-                        <a href="#">@item.BookName</a>
+                        <a href="#">
+                            @(item.BookName.Length >= 24 ? item.BookName.Substring(0, 24) + "..." : item.BookName)
+                        </a>
                         <div class="rating-icon">
                             @for (int j = 0; j < (int)item.Condition; j++)
                             {

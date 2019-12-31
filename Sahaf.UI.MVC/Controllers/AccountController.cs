@@ -15,6 +15,7 @@ namespace Sahaf.UI.MVC.Controllers
         {
             userService = user;
         }
+
         // GET: Account
         public ActionResult Index()
         {
@@ -79,12 +80,12 @@ namespace Sahaf.UI.MVC.Controllers
         {
             return View();
         }
-        
+
         public ActionResult MyFavorites()
         {
             return View();
         }
-        
+
         public ActionResult Sahaf()
         {
             return View();
