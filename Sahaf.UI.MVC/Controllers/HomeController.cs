@@ -10,10 +10,30 @@ namespace Sahaf.UI.MVC.Controllers
 {
     public class HomeController : Controller
     {
-        // GET: Home
+        IAdvertService advertService;
+        public HomeController(IAdvertService advert)
+        {
+            advertService = advert;
+        }
+
+
         public ActionResult Index()
         {
             return View();
+        }
+
+        public ActionResult _GetAdverts()
+        {
+            return PartialView(advertService.GetAll().Take(8).ToList());
+        }
+
+        public PartialViewResult _GetAdvertForModal(int? id)
+        {
+            if (id != null)
+            {
+                return PartialView("_GetAdvertForModal", advertService.Get(id.Value));
+            }
+            return PartialView();
         }
     }
 }
