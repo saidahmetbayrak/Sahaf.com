@@ -1,0 +1,41 @@
+﻿@foreach (Advert item in Model)
+{
+    <div class="single-shop-product">
+        <div class="col-xs-12 col-sm-5 col-md-4">
+            <div class="left-item">
+                <a href="single-product.html" title="@item.BookName">
+                    <img src="~/Content/home-img/featured/1.jpg" alt="">
+                </a>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-7 col-md-8">
+            <div class="deal-product-content">
+                <h4>
+                    <a href="single-product.html" title="East of eden">@item.BookName</a>
+                </h4>
+                <div class="product-price">
+                    <span class="new-price">&#8378; @item.Price</span>
+                    @*<span class="old-price">$ 120.00</span>*@
+                </div>
+                <div class="list-rating-icon">
+                    @for (int i = 0; i < (int)item.Condition; i++)
+                    {
+                        <i class="fa fa-star icolor"></i>
+                    }
+                    @if ((int)item.Condition != 5)
+                    {
+                        for (int i = 0; i < 5 - (int)item.Condition; i++)
+                        {
+                            <i class="fa fa-star"></i>
+                        }
+                    }
+                </div>
+                <p>@item.Description</p>
+                <div class="availability">
+                    <span>In stock</span>
+                    <span><a href="cart.html">Add to cart</a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+}

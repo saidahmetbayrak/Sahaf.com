@@ -1990,6 +1990,8 @@
     <Content Include="Areas\Admin\Views\Home\Users.cshtml" />
     <Content Include="Areas\Admin\Views\Home\Categorys.cshtml" />
     <Content Include="Areas\Admin\Views\Home\Admins.cshtml" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <Content Include="Web.config" />
     <Content Include="Views\Home\_AnasayfaLayout.cshtml" />
     <Content Include="Views\Books\Index.cshtml" />
@@ -2031,6 +2033,9 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Books\_CategoryOfAdverts.cshtml" />
+    <Content Include="Views\Books\_CategoryMenu.cshtml" />
+    <Content Include="Views\Books\_CategoryOfAdvertsList.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

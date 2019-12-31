@@ -32,7 +32,7 @@ namespace Sahaf.BLL.Concrete
             return _advertDAL.Get(a => a.ID == entityID);
         }
 
-        public ICollection<Advert> GetAlbumsByCategory(int catID)
+        public ICollection<Advert> GetAdvertsByCategory(int catID)
         {
             return _advertDAL.GetAll(a => a.CategoryID == catID);
         }

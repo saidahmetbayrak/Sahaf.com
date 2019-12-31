@@ -1,4 +1,5 @@
 ﻿using Sahaf.BLL.Abstract;
+using Sahaf.Model.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,9 +20,32 @@ namespace Sahaf.UI.MVC.Controllers
         // GET: Books
         public ActionResult Index()
         {
-            var categorys = categoryService.GetAll();
+            return View();
+        }
 
-            return View(categorys);
+        public ActionResult _CategoryMenu()
+        {
+            return PartialView(categoryService.GetAll());
+        }
+
+        public PartialViewResult _CategoryOfAdvertsGrid(int? id)
+        {
+            if (id != null)
+            {
+                return PartialView("_CategoryOfAdverts", advertService.GetAdvertsByCategory(id.Value).ToList());
+            }
+
+            return PartialView("_CategoryOfAdverts", advertService.GetAll());
+        }
+
+        public PartialViewResult _CategoryOfAdvertsList(int? id)
+        {
+            if (id != null)
+            {
+                return PartialView("_CategoryOfAdvertsList", advertService.GetAdvertsByCategory(id.Value).ToList());
+            }
+
+            return PartialView("_CategoryOfAdvertsList", advertService.GetAll());
         }
     }
 }

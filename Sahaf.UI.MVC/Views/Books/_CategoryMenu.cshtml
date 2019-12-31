@@ -1,0 +1,8 @@
+﻿@foreach (Category item in Model)
+{
+    <li id="menu_@item.ID">
+        <a href="javascript:void(0)" onclick="CategoryByAdvertList(@item.ID)">
+            @item.CategoryName
+        </a>
+    </li>
+}
