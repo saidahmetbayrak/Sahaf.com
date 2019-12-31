@@ -24,7 +24,7 @@ namespace Sahaf.UI.MVC.Controllers
 
         public ActionResult _GetAdverts()
         {
-            return PartialView(advertService.GetAll().Take(8).ToList());
+            return PartialView(advertService.GetAll().Take(20).ToList());
         }
 
         public PartialViewResult _GetAdvertForModal(int? id)
