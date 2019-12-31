@@ -1,0 +1,76 @@
+﻿@model List<Advert>
+    @foreach (Advert item in Model)
+    {
+
+
+    <div class="single-p-banner">
+        <div class="col-md-3">
+            <div class="single-banner">
+                <div class="product-wrapper">
+                    <a href="#" class="single-banner-image-wrapper">
+                        <img alt="" src="~/Content/home-img/featured/1.jpg">
+                        <div class="price"><span>$</span>@item.Price</div>
+
+                    </a>
+                    <div class="product-description">
+                        <div class="functional-buttons">
+                            <a href="#" title="Add to Cart">
+                                <i class="fa fa-shopping-cart"></i>
+                            </a>
+                            <a href="#" title="Add to Wishlist">
+                                <i class="fa fa-heart-o"></i>
+                            </a>
+                            <a href="#" title="Quick view" data-toggle="modal" data-target="#productModal"
+                               onclick="GetAdvertByID(@item.ID)">
+                                <i class="fa fa-compress"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="banner-bottom text-center">
+                    <a href="#">@item.BookName</a>
+                    <div class="rating-icon">
+                        <i class="fa fa-star icolor"></i>
+                        <i class="fa fa-star icolor"></i>
+                        <i class="fa fa-star icolor"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @*<div class="col-md-3">
+            <div class="single-banner">
+                <div class="product-wrapper">
+                    <a href="#" class="single-banner-image-wrapper">
+                        <img alt="" src="~/Content/home-img/featured/5.jpg">
+                        <div class="price"><span>$</span>@item.Price</div>
+                    </a>
+                    <div class="product-description">
+                        <div class="functional-buttons">
+                            <a href="#" title="Add to Cart">
+                                <i class="fa fa-shopping-cart"></i>
+                            </a>
+                            <a href="#" title="Add to Wishlist">
+                                <i class="fa fa-heart-o"></i>
+                            </a>
+                            <a href="#" title="Quick view" data-toggle="modal" data-target="#productModal">
+                                <i class="fa fa-compress"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="banner-bottom text-center">
+                    <a href="#">@item.BookName</a>
+                    <div class="rating-icon">
+                        <i class="fa fa-star icolor"></i>
+                        <i class="fa fa-star icolor"></i>
+                        <i class="fa fa-star icolor"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>*@
+    </div> 
+    }

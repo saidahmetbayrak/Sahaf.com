@@ -12,7 +12,7 @@ namespace Sahaf.DAL.Concrete
 {
     public class SahafDbContext : DbContext
     {
-        public SahafDbContext() : base(@"server=DESKTOP-TT3KGQ8\SQLEXPRESS;Database=sahafDB;UID=sa;PWD=12345;")
+        public SahafDbContext() : base(@"server=.;Database=sahafDB;Integrated Security=true;")
         {
             //Database.SetInitializer<SahafDbContext>(new MyStrategy());
         }
