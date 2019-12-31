@@ -2036,7 +2036,7 @@
     <Content Include="Views\Books\_CategoryOfAdverts.cshtml" />
     <Content Include="Views\Books\_CategoryMenu.cshtml" />
     <Content Include="Views\Books\_CategoryOfAdvertsList.cshtml" />
-    <Content Include="Views\Books\_GetAdvertForModal.cshtml" />
+    <Content Include="Views\Shared\_GetAdvertForModal.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

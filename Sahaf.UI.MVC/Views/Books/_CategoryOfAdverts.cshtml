@@ -19,7 +19,7 @@
                         <a href="#" title="Add to Wishlist">
                             <i class="fa fa-heart-o"></i>
                         </a>
-                        <a href="#" title="Quick view" data-toggle="modal" data-target="#productModal" onclick="GetAdvertByID(@item.ID)">
+                        <a href="#" title="@item.BookName" data-toggle="modal" data-target="#productModal" onclick="GetAdvertByID(@item.ID)">
                             <i class="fa fa-compress"></i>
                         </a>
                     </div>
@@ -27,7 +27,9 @@
             </div>
             <div class="banner-bottom text-center">
                 <div class="banner-bottom-title">
-                    <a href="#">@item.BookName</a>
+                    <a href="#">
+                        @(item.BookName.Length>=24 ? item.BookName.Substring(0, 24)+"..." : item.BookName)
+                    </a>
                 </div>
                 <div class="rating-icon">
                     @for (int i = 0; i < (int)item.Condition; i++)

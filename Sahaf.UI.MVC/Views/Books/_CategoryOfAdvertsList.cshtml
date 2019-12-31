@@ -3,7 +3,7 @@
     <div class="single-shop-product">
         <div class="col-xs-12 col-sm-5 col-md-4">
             <div class="left-item">
-                <a href="single-product.html" title="@item.BookName">
+                <a href="#" title="@item.BookName" data-toggle="modal" data-target="#productModal" onclick="GetAdvertByID(@item.ID)">
                     <img src="~/Content/home-img/featured/1.jpg" alt="">
                 </a>
             </div>
@@ -11,7 +11,9 @@
         <div class="col-xs-12 col-sm-7 col-md-8">
             <div class="deal-product-content">
                 <h4>
-                    <a href="single-product.html" title="East of eden">@item.BookName</a>
+                    <a href="#" title="@item.BookName" data-toggle="modal" data-target="#productModal" onclick="GetAdvertByID(@item.ID)">
+                        @item.BookName
+                    </a>
                 </h4>
                 <div class="product-price">
                     <span class="new-price">&#8378; @item.Price</span>
