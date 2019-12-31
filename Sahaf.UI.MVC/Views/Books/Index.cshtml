@@ -1,4 +1,4 @@
-﻿
+﻿@model List<Category>
 @{
     ViewBag.Title = "KİTAPLAR";
 }
@@ -12,34 +12,16 @@
                             <aside class="widget widget-categories">
                                 <h2 class="sidebar-title text-center">CATEGORY</h2>
                                 <ul class="sidebar-menu">
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa fa-angle-double-right"></i>
-                                            LEARNING
-                                            <span>(5)</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa fa-angle-double-right"></i>
-                                            LIGHTING
-                                            <span>(8)</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa fa-angle-double-right"></i>
-                                            LIVING ROOMS
-                                            <span>(4)</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa fa-angle-double-right"></i>
-                                            LAMP
-                                            <span>(7)</span>
-                                        </a>
-                                    </li>
+                                    @foreach (Category item in Model)
+                                    {
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa fa-angle-double-right"></i>
+                                                @item.CategoryName
+                                                @*<span>(@item.Coun)</span>*@
+                                            </a>
+                                        </li>
+                                    }
                                 </ul>
                             </aside>
                             <aside class="widget shop-filter">
