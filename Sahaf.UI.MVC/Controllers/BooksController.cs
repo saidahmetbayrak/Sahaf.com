@@ -47,5 +47,14 @@ namespace Sahaf.UI.MVC.Controllers
 
             return PartialView("_CategoryOfAdvertsList", advertService.GetAll());
         }
+
+        public PartialViewResult _GetAdvertForModal(int? id)
+        {
+            if (id != null)
+            {
+                return PartialView("_GetAdvertForModal", advertService.Get(id.Value));
+            }
+            return PartialView();
+        }
     }
 }

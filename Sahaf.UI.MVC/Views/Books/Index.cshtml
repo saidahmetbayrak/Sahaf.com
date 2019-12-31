@@ -184,6 +184,17 @@
             }
         }
 
+        function GetAdvertByID(id) {
+            $.ajax({
+                    type: "GET",
+                    url: '@Url.Action("_GetAdvertForModal","Books")',
+                    data: { id: id },
+                    success: function (data) {
+                        $("#productModal").html(data);
+                    }
+                })
+        }
+
     </script>
 
 
