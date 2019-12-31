@@ -1,0 +1,88 @@
+﻿
+@{
+    ViewBag.Title = "Register";
+}
+
+
+@model User
+<div class="login-account section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-3">
+            </div>
+            <div class="col-md-6 col-sm-6">
+                @using (Html.BeginForm())
+                {
+                    <h2 class="heading-title">
+                        kayıt Yap
+                    </h2>
+                    <div class="col-md-12">
+                        <p class="form-row">
+                            @Html.TextBoxFor(a => a.Username, new { @placeholder = "Kullanıcı Adı *" })
+                            @*<input type="text" placeholder="">*@
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <p class="form-row">
+                            @Html.TextBoxFor(a => a.FirstName, new { @placeholder = "Ad *" })
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <p class="form-row">
+                            @Html.TextBoxFor(a => a.LastName, new { @placeholder = "Soyad *" })
+                        </p>
+                    </div>
+                    <div class="col-md-12">
+                        <p class="form-row">
+                            @Html.TextBoxFor(a => a.Phone, new { @placeholder = "Telefon *" })
+                        </p>
+                    </div>
+                    <div class="col-md-12">
+                        <p class="form-row">
+                            @Html.TextBoxFor(a => a.EMail, new { @placeholder = "E-Posta *", @type = "mail" })
+                        </p>
+                    </div>
+                    <div class="col-md-12">
+                        <p class="form-row">
+                            @Html.TextBoxFor(a => a.Address, new { @placeholder = "Adres *" })
+                        </p>
+                    </div>
+                    <div class="country-select shop-select col-md-12">
+                        <p class="form-row">
+                            <label>Dogum Tarihi</label>
+                            @Html.TextBoxFor(a => a.BirthDate, new { @type = "date",@value=DateTime.Now})
+                        </p>
+                    </div>
+                    <div class="col-md-12">
+                        <p class="form-row">
+                            @Html.TextBoxFor(a => a.Address, new { @placeholder = "Şifre *" ,@type="password"})
+                        </p>
+                    </div>
+                    <div class="col-md-12">
+                        <p class="form-row">
+                            @Html.TextBoxFor(a => a.Address, new { @placeholder = "Şifre Tekrar *", @type = "password" })
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <p class="form-row">
+                            <img src="http://placehold.jp/292x300.png" alt="sa">
+                            Resim Yükle: <input type="file" name="myFile">
+                        </p>
+                    </div>
+                    <div class="col-md-12 submit">
+                        <p class="form-row">
+                            <button name="submitcreate" id="submitcreate" type="submit" class="btn-default">
+                                <span>
+                                    <i class="fa fa-user left"></i>
+                                    Kayıt ol
+                                </span>
+                            </button>
+                        </p>
+                    </div>
+                }
+            </div>
+            <div class="col-md-3 col-sm-3">
+            </div>
+        </div>
+    </div>
+</div>

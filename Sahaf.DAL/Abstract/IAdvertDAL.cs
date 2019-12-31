@@ -11,6 +11,6 @@ namespace Sahaf.DAL.Abstract
 {
    public interface IAdvertDAL:IRepository<Advert>
     {
-        /* kalkalım kalkmasında iki zara yüzbinlik olduk , ayıp oluyor be abi */
+        
     }
 }
