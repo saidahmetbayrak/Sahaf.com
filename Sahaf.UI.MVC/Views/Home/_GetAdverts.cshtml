@@ -30,11 +30,19 @@
                     <div class="banner-bottom text-center">
                         <a href="#">@item.BookName</a>
                         <div class="rating-icon">
-                            <i class="fa fa-star icolor"></i>
-                            <i class="fa fa-star icolor"></i>
-                            <i class="fa fa-star icolor"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
+                            @for (int j = 0; j < (int)item.Condition; j++)
+                            {
+                                <i class="fa fa-star icolor"></i>
+                            }
+                            @if ((int)item.Condition != 5)
+                            {
+                                for (int i = 0; i < 5 - (int)item.Condition; i++)
+                                {
+                                    <i class="fa fa-star"></i>
+                                }
+                            }
+                            
+
                         </div>
                     </div>
                 </div>
