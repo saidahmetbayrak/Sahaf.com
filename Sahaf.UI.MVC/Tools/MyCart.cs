@@ -16,16 +16,16 @@ namespace Sahaf.UI.MVC.Tools
         {
             if (_basket.ContainsKey(cartItem.ID))
             {
-                _basket[cartItem.ID].Amount += cartItem.Amount;
+                _basket[cartItem.ID].Quantity += cartItem.Quantity;
                 return;
             }
             _basket.Add(cartItem.ID, cartItem);
         }
-        public void Update(int id, short amount)
+        public void Update(int id, short quantity)
         {
             if (_basket.ContainsKey(id))
             {
-                _basket[id].Amount = amount;
+                _basket[id].Quantity = quantity;
             }
             
         }
@@ -37,7 +37,7 @@ namespace Sahaf.UI.MVC.Tools
             }
         }
 
-        public int TotalAmount { get { return _basket.Values.Sum(x => x.Amount); } }
+        public int TotalAmount { get { return _basket.Values.Sum(x => x.Quantity); } }
 
     }
 }

@@ -39,7 +39,8 @@ namespace Sahaf.Core.DAL
             }
         }
 
-        
+
+
         public void Remove(TEntity entity)
         {
             db.Entry(entity).State = EntityState.Deleted;
@@ -51,5 +52,6 @@ namespace Sahaf.Core.DAL
             db.Entry(entity).State = EntityState.Modified;
             db.SaveChanges();
         }
+
     }
 }

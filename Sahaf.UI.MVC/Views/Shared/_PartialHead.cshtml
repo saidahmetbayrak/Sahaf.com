@@ -48,14 +48,14 @@
                 </div>
                 <div class="col-md-1 col-sm-6 visible-sm  col-xs-6">
                     <div class="header-right">
-                        <ul>
+                        <ul id="shopping_cart">
                             <li>
                                 <a href="account.html"><i class="flaticon-people"></i></a>
                             </li>
                             <li class="shoping-cart">
                                 <a href="#">
                                     <i class="flaticon-shop"></i>
-                                    <span>2</span>
+                                    <span>@Html.Action("_CartButton", "Cart")</span>
                                 </a>
                                 <div class="add-to-cart-product">
                                     <div class="cart-product">
@@ -224,3 +224,4 @@
         </div>
     </div>
     <!-- Mobile Menu End -->
+   
