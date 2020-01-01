@@ -13,6 +13,7 @@ namespace Sahaf.Model.Entities
         public User()
         {
             Antiqurian = false;
+            RoleID = 1;
         }
         public string Username { get; set; }//KullanıcıAdı
         public string FirstName { get; set; }//Ad

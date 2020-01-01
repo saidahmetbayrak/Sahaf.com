@@ -16,6 +16,12 @@ namespace Sahaf.BLL.Concrete
         {
             _userDAL = userDAL;
         }
+
+        public ICollection<User> CheckUser(string username, string mail)
+        {
+            return _userDAL.GetAll(a => a.Username == username && a.EMail==mail || a.Username==username || a.EMail==mail);
+        }
+
         public void Delete(User entity)
         {
             _userDAL.Remove(entity);

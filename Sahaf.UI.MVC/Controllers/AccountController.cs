@@ -50,20 +50,25 @@ namespace Sahaf.UI.MVC.Controllers
         [HttpPost]
         public ActionResult Register(User user)
         {
-            //try
-            //{
-            //    userService.Insert(user);
-            //    bool sonuc = MailHelper.SendConfirmationMail(user.UserName, user.Password, user.Email, user.ID);
-            //    if (!sonuc)
-            //    {
-            //        return View();
-            //    }
-            //}
-            //catch (Exception ex)
-            //{
-            //    ViewBag.Error = "Veritabanı ekleme hatası!";
-            //    return View();
-            //}
+            try
+            {
+                var gelenKullanici = userService.CheckUser(user.Username,user.EMail);
+                if (gelenKullanici.Count == 0)
+                {
+                    userService.Insert(user);
+                }
+                else
+                {
+                    ViewBag.Error = "Böyle bir kullanıcı kayıtlı!";
+                    return View();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+                ViewBag.Error = "Veritabanı ekleme hatası!";
+                return View();
+            }
             return RedirectToAction("Login", "Account");
         }
         public ActionResult Logout()
