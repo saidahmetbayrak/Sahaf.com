@@ -16,6 +16,11 @@ namespace Sahaf.UI.MVC.Areas.Admin.Controllers
             return View();
         }
 
+        public ActionResult Login()
+        {
+            return View();
+        }
+
         public ActionResult PendingApprovals()
         {
             return View();
