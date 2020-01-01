@@ -51,6 +51,18 @@
                 })
         }
 
+        function AddToMyCart(aid) {
+            $.ajax({
+                type: "Get",
+                url: '@Url.Action("AddToCart","Cart")',
+                data: { id: aid },
+                success: function (data) {
+                    $("#shopping_cart li:nth-child(2)").html(data);
+                }
+
+            })
+        }
+
     </script>
 
 

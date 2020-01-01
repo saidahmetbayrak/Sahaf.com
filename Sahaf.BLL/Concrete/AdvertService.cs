@@ -56,5 +56,6 @@ namespace Sahaf.BLL.Concrete
         {
             _advertDAL.Update(entity);
         }
+
     }
 }

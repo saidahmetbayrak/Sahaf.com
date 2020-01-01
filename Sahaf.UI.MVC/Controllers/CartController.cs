@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Sahaf.BLL.Abstract;
+using Sahaf.UI.MVC.Tools;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,10 +10,47 @@ namespace Sahaf.UI.MVC.Controllers
 {
     public class CartController : Controller
     {
-        // GET: Cart
+        IAdvertService advertService;
+        public CartController(IAdvertService advert)
+        {
+            advertService = advert;
+        }
+
         public ActionResult Index()
         {
             return View();
+        }
+        public ActionResult _CartList()
+        {
+            return PartialView();
+        }
+        public ActionResult _CartButton()
+        {
+            return PartialView();
+        }
+
+        public ActionResult AddToCart(int id)
+        {
+            //MyCart myCart = new MyCart(); bu kullanım bana sürekli yeni sepetler oluşturur.
+            MyCart cart = Session["cart"] as MyCart;
+            CartItem cartItem = new CartItem();
+            var eklenenUrun = advertService.GetAll().Where(x => x.ID == id).SingleOrDefault();
+            cartItem.ID = eklenenUrun.ID;
+            cartItem.BookName = eklenenUrun.BookName;
+            cartItem.Writer = eklenenUrun.Writer;
+            cartItem.Price = eklenenUrun.Price;
+            cartItem.Quantity = 1;
+
+            //cartItem.SubTotal
+            //cartItem.ID = eklenenUrun.ID;
+            //cartItem.Name = eklenenUrun.Title;
+            //cartItem.Price = eklenenUrun.Price;
+            //cartItem.Amount = 1;
+
+            cart.Add(cartItem);
+            Session["cart"] = cart;
+
+            return PartialView("_CartButton");
         }
     }
 }

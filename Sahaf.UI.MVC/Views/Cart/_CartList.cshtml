@@ -1,0 +1,81 @@
+﻿<table>
+    <thead>
+        <tr>
+            <th class="product-remove">Remove</th>
+            <th class="product-image">Image</th>
+            <th class="t-product-name">Product Name</th>
+            <th class="product-edit">Yazar</th>
+            <th class="product-unit-price">Unit Price</th>
+            <th class="product-quantity">Quantity</th>
+            <th class="product-subtotal">Subtotal</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Sahaf.UI.MVC.Tools.CartItem item in (Session["cart"] as Sahaf.UI.MVC.Tools.MyCart).GetAllCartItem)
+        {
+            <tr>
+                <td class="product-remove">
+                    <a href="#">
+                        <i class="flaticon-delete"></i>
+                    </a>
+                </td>
+                <td class="product-image">
+                    <a href="#">
+                        <img src="~/Content/home-img/shop/1.jpg" alt="">
+                    </a>
+                </td>
+                <td class="t-product-name">
+                    <h3>
+                        <a href="#">@item.BookName</a>
+                    </h3>
+                </td>
+                <td class="product-edit">
+                    <p>
+                        <a href="#">@item.Writer</a>
+                    </p>
+                </td>
+                <td class="product-unit-price">
+                    <p>@item.Price</p>
+                </td>
+                <td class="product-quantity product-cart-details">
+                    <input type="number" value="@item.Quantity">
+                </td>
+                <td class="product-quantity">
+                    <p>$@item.Price*@item.Quantity</p>
+                </td>
+            </tr>
+        }
+
+        @*<tr>
+            <td class="product-remove">
+                <a href="#">
+                    <i class="flaticon-delete"></i>
+                </a>
+            </td>
+            <td class="product-image">
+                <a href="#">
+                    <img src="~/Content/home-img/shop/2.jpg" alt="">
+                </a>
+            </td>
+            <td class="t-product-name">
+                <h3>
+                    <a href="#">East of eden</a>
+                </h3>
+            </td>
+            <td class="product-edit">
+                <p>
+                    <a href="#">Yazar2</a>
+                </p>
+            </td>
+            <td class="product-unit-price">
+                <p>$ 100</p>
+            </td>
+            <td class="product-quantity product-cart-details">
+                <input type="number" value="1">
+            </td>
+            <td class="product-quantity">
+                <p>$ 100</p>
+            </td>
+        </tr>*@
+    </tbody>
+</table>

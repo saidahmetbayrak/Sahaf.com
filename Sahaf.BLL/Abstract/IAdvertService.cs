@@ -11,5 +11,6 @@ namespace Sahaf.BLL.Abstract
     {
         ICollection<Advert> GetAdvertsByCategory(int catID);
         ICollection<Advert> GetLastAddedAllAdverts();
+        //Advert SelectByID(int id);
     }
 }
