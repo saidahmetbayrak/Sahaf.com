@@ -12,7 +12,7 @@ namespace Sahaf.Model.Entities
 {
    public class Advert:BaseEntity
     {
-       
+
         public string BookName { get; set; }//KitapAdı
         public string Writer { get; set; }//Yazar
         public decimal Price { get; set; }//Fiyat
@@ -24,7 +24,6 @@ namespace Sahaf.Model.Entities
         public int PublishYear { get; set; }//YayinYılı
         public string Description { get; set; }//Acıklama
         public string AdvertİmgUrl { get; set; }//ResimYolu
-
 
         //Foreign Key
         public int UserID { get; set; }

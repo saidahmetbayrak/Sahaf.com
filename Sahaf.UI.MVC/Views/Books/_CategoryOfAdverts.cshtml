@@ -8,7 +8,14 @@
         <div class="single-banner">
             <div class="product-wrapper">
                 <a href="#" class="single-banner-image-wrapper">
-                    <img alt="" src="~/Content/home-img/featured/1.jpg">
+                    @if (string.IsNullOrEmpty(item.AdvertİmgUrl))
+                    {
+                        <img src="~/Content/home-img/featured/1.jpg" alt="">
+                    }
+                    else
+                    {
+                        <img src="@Url.Content(item.AdvertİmgUrl)" alt="@item.BookName" width="270" height="280" multiple />
+                    }
                     <div class="price"><span>&#8378;</span>@item.Price</div>
                 </a>
                 <div class="product-description">

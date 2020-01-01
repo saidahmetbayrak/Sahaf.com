@@ -10,7 +10,7 @@ namespace Sahaf.BLL.Abstract
    public interface IAdvertService:IBaseService<Advert>
     {
         ICollection<Advert> GetAdvertsByCategory(int catID);
+        ICollection<Advert> GetAdvertsByUser(int userID);
         ICollection<Advert> GetLastAddedAllAdverts();
-        //Advert SelectByID(int id);
     }
 }

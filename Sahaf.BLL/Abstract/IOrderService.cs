@@ -8,5 +8,6 @@ namespace Sahaf.BLL.Abstract
 {
    public interface IOrderService:IBaseService<Order>
     {
+        ICollection<Order> GetOrdersByUser(int userID);
     }
 }

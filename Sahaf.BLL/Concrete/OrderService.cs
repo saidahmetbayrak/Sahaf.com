@@ -36,6 +36,11 @@ namespace Sahaf.BLL.Concrete
             return _orderDAL.GetAll();
         }
 
+        public ICollection<Order> GetOrdersByUser(int userID)
+        {
+            return _orderDAL.GetAll(x => x.UserID == userID);
+        }
+
         public void Insert(Order entity)
         {
             _orderDAL.Add(entity);

@@ -11,7 +11,15 @@
                     <div class="modal-product">
                         <div class="product-images">
                             <div class="main-image images">
-                                <img alt="@Model.BookName" src="https://picsum.photos/id/1025/320/400">
+                                
+                                @if (string.IsNullOrEmpty(Model.AdvertİmgUrl))
+                                {
+                                    <img alt="@Model.BookName" src="https://picsum.photos/id/1025/320/400">
+                                }
+                                else
+                                {
+                                    <img src="@Url.Content(Model.AdvertİmgUrl)" alt="@Model.BookName" width="270" height="280" multiple />
+                                }
                             </div>
                         </div>
                         <div class="product-info">

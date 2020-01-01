@@ -24,6 +24,7 @@ namespace Sahaf.Model.Entities
         public string Password { get; set; }//Sifre
         public DateTime BirthDate { get; set; }//Doğum Tarihi
         public bool Antiqurian { get; set; }//Sahaf Mı
+        //public string ImageUrl { get; set; }
 
 
         //Foreign Key

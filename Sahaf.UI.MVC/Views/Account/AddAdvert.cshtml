@@ -1,0 +1,105 @@
+﻿
+@{
+    ViewBag.Title = "Yeni İlan";
+    Layout = "~/Views/Shared/_NestedLayout.cshtml";
+}
+@model Advert
+<div class="row">
+    <div class="col-md-12">
+        @using (Html.BeginForm("AddAdvert","Account", FormMethod.Post, new {enctype = "multipart/form-data" }))
+        {
+            <h2 class="heading-title">
+                Yeni ilan
+            </h2>
+            if (ViewBag.Error != null)
+            {
+                <h3 class="alert alert-danger">
+                    @ViewBag.Error
+                </h3>
+            }
+            <div class="col-md-12">
+                <p class="form-row">
+                    <label>Kitap Adı</label>
+                    @Html.TextBoxFor(a => a.BookName, new { @placeholder = "Kitap Adı *" })
+                </p>
+            </div>
+            <div class="col-md-6">
+                <p class="form-row">
+                    <label>Yazar</label>
+                    @Html.TextBoxFor(a => a.Writer, new { @placeholder = "Yazar *" })
+                </p>
+            </div>
+            <div class="col-md-6">
+                <p class="form-row">
+                    <label>Fiyat</label>
+                    @Html.TextBoxFor(a => a.Price, new { @placeholder = "Fiyat *", @type = "number" })
+                </p>
+            </div>
+            <div class="col-md-12">
+                <p class="form-row">
+                    <label>Kondisyon</label>
+                    @Html.TextBoxFor(a => a.Condition, new { @placeholder = "Kondisyon 1-5 *", @type = "number", @min = 1, @max = 5 })
+                </p>
+            </div>
+            <div class="col-md-12">
+                <p class="form-row">
+                    <label>Kategori</label>
+                    @Html.TextBoxFor(a => a.CategoryID, new { @placeholder = "Kategori 1-"+ViewBag.CatCount+" *", @type = "number", @min = 1, @max = ViewBag.CatCount})
+                </p>
+            </div>
+            <div class="col-md-12">
+                <p class="form-row">
+                    <label>Status</label>
+                    @Html.TextBoxFor(a => a.Status, new { @placeholder = "0 Eski / 1 Yeni *", @type = "number", @min = 0, @max = 1 })
+                </p>
+            </div>
+            <div class="col-md-12">
+                <p class="form-row">
+                    <label>Dil</label>
+                    @Html.TextBoxFor(a => a.Language, new { @placeholder = "Kitap Dili *" })
+                </p>
+            </div>
+            <div class="country-select shop-select col-md-12">
+                <p class="form-row">
+                    <label>Stok</label>
+                    @Html.TextBoxFor(a => a.Stock, new { @placeholder = "Stok Adedi *", @type = "number" })
+                </p>
+            </div>
+            <div class="col-md-12">
+                <p class="form-row">
+                    <label>Yayıncı</label>
+                    @Html.TextBoxFor(a => a.PublisherName, new { @placeholder = "Yayıncı *" })
+                </p>
+            </div>
+            <div class="country-select shop-select col-md-12">
+                <p class="form-row">
+                    <label>Yayınlanma yılı</label>
+                    @Html.TextBoxFor(a => a.PublishYear, new { @placeholder = "Yıl *" })
+                </p>
+            </div>
+            <div class="col-md-12">
+                <p class="form-row">
+                    <label>Açıklama</label>
+                    @Html.TextBoxFor(a => a.Description, new { @placeholder = "Açıklama *" })
+                </p>
+            </div>
+            <div class="col-md-6">
+                <p class="form-row">
+                    Resim Yükle: <input type="file" name="ImageFile">@*buraya ImageFile yazdık posla gönderirken parametredeki ile aynı*@
+                </p>
+            </div>
+            <div class="col-md-12 submit">
+                <p class="form-row">
+                    <button name="submitcreate" id="submitcreate" type="submit" class="btn-default">
+                        <span>
+                            <i class="fa fa-user left"></i>
+                            İlan oluştur
+                        </span>
+                    </button>
+                </p>
+            </div>
+        }
+    </div>
+</div>
+
+

@@ -2051,6 +2051,7 @@
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Cart\_CartButton.cshtml" />
     <Content Include="Views\Cart\_CartList.cshtml" />
+    <Content Include="Views\Account\AddAdvert.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -2061,6 +2062,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Data\" />
+    <Folder Include="Images\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>

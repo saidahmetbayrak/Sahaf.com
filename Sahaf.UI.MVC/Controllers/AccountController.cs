@@ -3,6 +3,7 @@ using Sahaf.Model.Entities;
 using Sahaf.UI.MVC.FiltersCustom;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -12,9 +13,15 @@ namespace Sahaf.UI.MVC.Controllers
     public class AccountController : Controller
     {
         IUserService userService;
-        public AccountController(IUserService user)
+        IAdvertService advertService;
+        ICategoryService categoryService;
+        IOrderService orderService;
+        public AccountController(IUserService user,IAdvertService advert,ICategoryService category,IOrderService order)
         {
             userService = user;
+            advertService = advert;
+            categoryService = category;
+            orderService = order;
         }
         [AuthorizeAttr]
         // GET: Account
@@ -48,7 +55,7 @@ namespace Sahaf.UI.MVC.Controllers
         }
 
         [HttpPost]
-        public ActionResult Register(User user)
+        public ActionResult Register(User user, HttpPostedFileBase ImageFile)
         {
             try
             {
@@ -84,11 +91,48 @@ namespace Sahaf.UI.MVC.Controllers
         [AuthorizeAttr]
         public ActionResult MyAdverts()
         {
+            User currentUser = Session["Kullanici"] as User;
+            var adverts = advertService.GetAdvertsByUser(currentUser.ID);
+            return View(adverts);
+        }
+
+        [AuthorizeAttr]
+        public ActionResult AddAdvert()
+        {
+            int categoryCount = categoryService.GetAll().Count;
+            ViewBag.CatCount = categoryCount;
             return View();
         }
+        [AuthorizeAttr,HttpPost]
+        public ActionResult AddAdvert(Advert advert, HttpPostedFileBase ImageFile)
+        {
+
+            try
+            {
+                advert.UserID = (Session["Kullanici"] as User).ID;
+                string fileName = Path.GetFileNameWithoutExtension(ImageFile.FileName);
+                string extension = Path.GetExtension(ImageFile.FileName);
+                fileName = fileName + DateTime.Now.ToString("yymmssfff") + extension;
+                advert.AdvertİmgUrl = "~/Images/" + fileName;
+                fileName = Path.Combine(Server.MapPath("~/Images/"), fileName);
+                ImageFile.SaveAs(fileName);
+                advertService.Insert(advert);
+            }
+            catch (Exception ex)
+            {
+                ViewBag.Error = ex.Message;
+                throw;
+            }
+            return View();
+        }
+
         [AuthorizeAttr]
         public ActionResult MyOrders()
         {
+            User currentUser = Session["Kullanici"] as User;
+
+            var orders = orderService.GetOrdersByUser(currentUser.ID);
+
             return View();
         }
         [AuthorizeAttr]

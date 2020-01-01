@@ -3,45 +3,52 @@
     ViewBag.Title = "Login";
 }
 @model User
-    <div class="login-account section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3 col-sm-3">
-                </div>
-                <div class="col-md-6 col-sm-6">
-                    @using (Html.BeginForm())
+<div class="login-account section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-3">
+            </div>
+            <div class="col-md-6 col-sm-6">
+                @using (Html.BeginForm())
+                {
+                    <h2 class="heading-title">
+                        Giriş Yap
+                    </h2>
+
+                    if (ViewBag.Error != null)
                     {
-                        <h2 class="heading-title">
-                            Giriş Yap
+                        <h2 class="alert alert-danger">
+                            @ViewBag.Error
                         </h2>
-                        <p class="form-row">
-                            @Html.TextBoxFor(a => a.Username, new { @placeholder = "Kullanıcı adı giriniz.." })
-                        </p>
-                        <p class="form-row">
-                            @Html.TextBoxFor(a => a.Password, new { @placeholder = "Şifre Giriniz" ,@type="password"})
-                        </p>
-                        <p class="lost-password form-group">
-                            <a href="#" rel="nofollow">Forgot your password?</a>
-                        </p>
-                        <div class="submit">
-                            <button name="submitcreate" id="submitcreate" type="submit" class="btn-default">
-                                <span>
-                                    <i class="fa fa-user left"></i>
-                                    Giriş Yap
-                                </span>
-                            </button>
-                            <button name="register" type="button" class="btn-default">
-                                <span>
-                                    <i class="fa fa-user left"></i>
-                                    <a href="@Url.Action("Register","Account")">Kayıt Ol</a>
-                                </span>
-                            </button>
-                        </div>
                     }
-                </div>
-                <div class="col-md-3 col-sm-3">
-                </div>
+                    <p class="form-row">
+                        @Html.TextBoxFor(a => a.Username, new { @placeholder = "Kullanıcı adı giriniz.." })
+                    </p>
+                    <p class="form-row">
+                        @Html.TextBoxFor(a => a.Password, new { @placeholder = "Şifre Giriniz", @type = "password" })
+                    </p>
+                    <p class="lost-password form-group">
+                        <a href="#" rel="nofollow">Forgot your password?</a>
+                    </p>
+                    <div class="submit">
+                        <button name="submitcreate" id="submitcreate" type="submit" class="btn-default">
+                            <span>
+                                <i class="fa fa-user left"></i>
+                                Giriş Yap
+                            </span>
+                        </button>
+                        <button name="register" type="button" class="btn-default">
+                            <span>
+                                <i class="fa fa-user left"></i>
+                                <a href="@Url.Action("Register","Account")">Kayıt Ol</a>
+                            </span>
+                        </button>
+                    </div>
+                }
+            </div>
+            <div class="col-md-3 col-sm-3">
             </div>
         </div>
     </div>
+</div>
 

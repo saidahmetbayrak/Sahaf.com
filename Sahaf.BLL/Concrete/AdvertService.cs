@@ -57,5 +57,9 @@ namespace Sahaf.BLL.Concrete
             _advertDAL.Update(entity);
         }
 
+        public ICollection<Advert> GetAdvertsByUser(int userID)
+        {
+            return _advertDAL.GetAll(a => a.UserID == userID);
+        }
     }
 }
