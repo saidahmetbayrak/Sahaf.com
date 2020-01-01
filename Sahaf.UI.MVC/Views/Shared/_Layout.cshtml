@@ -31,6 +31,48 @@
 
     @RenderBody()
     @RenderSection("scripts", false)
+    <script>
+        function CartUpdate(deger,gid) {
+            $.ajax({
+                type: "Get",
+                url: '@Url.Action("UpdateCart","Cart")',
+                data: { quantity: deger, id: gid },
+                success: function (data) {
+                    $("#dvBasket").html(data);
+                    location.reload();
+                }
+            })
+        }
+
+        function DeleteItemCart(gid) {
+            var cvp = confirm("Kitabı Sepetten Çıkarmak İstediğinize Eminmisiniz?")
+            if (cvp) {
+                $.ajax({
+                    type: "Get",
+                    url: '@Url.Action("DeleteItemCart","Cart")',
+                    data: { id: gid },
+                    success: function (data) {
+                        $("#dvBasket").html(data);
+                        location.reload();
+                    }
+                })
+            }
+        }
+
+        function AddToMyCart(aid) {
+            $.ajax({
+                type: "Get",
+                url: '@Url.Action("AddToCart","Cart")',
+                data: { id: aid },
+                success: function (data) {
+                    $("#shopping_cart li:nth-child(2)").html(data);
+                }
+
+            })
+        }
+
+
+    </script>
     @Html.Partial("_PartialFooter")
     </body>
 </html>
