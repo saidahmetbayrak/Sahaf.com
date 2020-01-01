@@ -16,7 +16,6 @@ namespace Sahaf.UI.MVC.Controllers
             advertService = advert;
         }
 
-
         public ActionResult Index()
         {
             return View();

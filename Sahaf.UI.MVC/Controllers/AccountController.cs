@@ -66,32 +66,37 @@ namespace Sahaf.UI.MVC.Controllers
             //}
             return RedirectToAction("Login", "Account");
         }
+        public ActionResult Logout()
+        {
+            Session["Kullanici"] = null;
+            return RedirectToAction("Index", "Home");
+        }
 
         public ActionResult Error()
         {
             return View();
         }
-
+        [AuthorizeAttr]
         public ActionResult MyAdverts()
         {
             return View();
         }
-
+        [AuthorizeAttr]
         public ActionResult MyOrders()
         {
             return View();
         }
-
+        [AuthorizeAttr]
         public ActionResult MyInbox()
         {
             return View();
         }
-
+        [AuthorizeAttr]
         public ActionResult MyFavorites()
         {
             return View();
         }
-
+        [AuthorizeAttr]
         public ActionResult Sahaf()
         {
             return View();

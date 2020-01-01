@@ -2047,6 +2047,8 @@
     <Content Include="Views\Books\_GetAdvertForModal.cshtml" />
     <Content Include="Views\Account\Error.cshtml" />
     <Content Include="Views\Cart\Index.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

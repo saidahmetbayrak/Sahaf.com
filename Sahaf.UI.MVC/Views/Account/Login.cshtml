@@ -15,10 +15,10 @@
                             Giriş Yap
                         </h2>
                         <p class="form-row">
-                            @Html.TextBoxFor(a => a.Username, new { @class = "form-control" })
+                            @Html.TextBoxFor(a => a.Username, new { @placeholder = "Kullanıcı adı giriniz.." })
                         </p>
                         <p class="form-row">
-                            @Html.TextBoxFor(a => a.Password, new { @class = "form-control" ,@type="password"})
+                            @Html.TextBoxFor(a => a.Password, new { @placeholder = "Şifre Giriniz" ,@type="password"})
                         </p>
                         <p class="lost-password form-group">
                             <a href="#" rel="nofollow">Forgot your password?</a>

@@ -25,7 +25,7 @@
     <link href="~/Content/admin-css/sb-admin-2.css" rel="stylesheet">
 
 </head>
-
+@model User
 <body class="bg-gradient-primary">
 
     <div class="container">
@@ -45,29 +45,30 @@
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4">Hoşgeldin!</h1>
                                     </div>
-                                    @using (Html.BeginForm("Login","Home",new {area="Admin"},FormMethod.Post,new {@class="user"}))
+                                    @using (Html.BeginForm("Login", "Home", new { area = "Admin" }, FormMethod.Post, new { @class = "user" }))
                                     {
-
-                                    }
-                                    <form class="user">
                                         <div class="form-group">
-                                            <input type="email" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Email Address...">
+                                            @Html.TextBoxFor(a => a.Username, new { @class = "form-control form-control-user", @placeholder = "Kullanıcı adı giriniz.." })
+                                            @*<input type="email" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Email Address...">*@
                                         </div>
                                         <div class="form-group">
-                                            <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password">
+                                            @Html.TextBoxFor(a => a.Password, new { @class = "form-control form-control-user", @placeholder = "Şifrenizi giriniz.." ,@type="password"})
+                                            @*<input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password">*@
                                         </div>
-                                        <div class="form-group">
+                                        @*<div class="form-group">
                                             <div class="custom-control custom-checkbox small">
                                                 <input type="checkbox" class="custom-control-input" id="customCheck">
                                                 <label class="custom-control-label" for="customCheck">Remember Me</label>
                                             </div>
-                                        </div>
-                                        <a href="index.html" class="btn btn-primary btn-user btn-block">
+                                        </div>*@
+                                        <input type="submit" class="btn btn-primary btn-user btn-block" value="Giriş"/>
+                                        <hr />
+                                        @*<a href="index.html" class="btn btn-primary btn-user btn-block">
                                             Login
                                         </a>
-                                        <hr>
-                                    </form>
-                                    <hr>
+                                        <hr>*@
+                                    }
+                                    @*<hr>*@
                                     <div class="text-center">
                                         <a class="small" href="forgot-password.html">Forgot Password?</a>
                                     </div>

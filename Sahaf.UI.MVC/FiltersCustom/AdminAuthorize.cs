@@ -29,18 +29,18 @@ namespace Sahaf.UI.MVC.FiltersCustom
         protected override void HandleUnauthorizedRequest(AuthorizationContext filterContext)
         {
             //kullanıcı girişi yokken nasıl davranacağını belirtiriz
-            filterContext.Result = new RedirectResult("/Account/Login");
+            //filterContext.Result = new RedirectResult("/Account/Login");
             if (HttpContext.Current.Session["kullanici"] != null)
             {
                 User currentUser = HttpContext.Current.Session["kullanici"] as User;
                 if (currentUser.RoleID != 3)//3 ADMIN
                 {
-                    filterContext.Result = new RedirectResult("/Account/Error");
+                    filterContext.Result = new RedirectResult("/Admin/Home/Login");
                 }
             }
             else
             {
-                filterContext.Result = new RedirectResult("/Account/Login");
+                filterContext.Result = new RedirectResult("/Admin/Home/Login");
             }
         }
     }
