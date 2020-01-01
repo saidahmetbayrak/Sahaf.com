@@ -52,5 +52,22 @@ namespace Sahaf.UI.MVC.Controllers
 
             return PartialView("_CartButton");
         }
+        public ActionResult UpdateCart(short quantity, int id)
+        {
+            MyCart guncellenenSepet = Session["cart"] as MyCart;
+            guncellenenSepet.Update(id, quantity);
+            Session["cart"] = guncellenenSepet;
+
+            return RedirectToAction("_CartList", "Cart");
+        }
+
+        public ActionResult DeleteItemCart(int id)
+        {
+            MyCart silinecekSepet = Session["cart"] as MyCart;
+            silinecekSepet.Delete(id);
+            Session["cart"] = silinecekSepet;
+
+            return RedirectToAction("_CartList", "Cart");
+        }
     }
 }

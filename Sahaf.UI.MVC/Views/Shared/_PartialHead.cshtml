@@ -32,6 +32,7 @@
 <link rel="stylesheet" href="~/Content/home-css/responsive.css">
 <!-- modernizr css -->
 <script src="~/Content/home-js/vendor/modernizr-2.8.3.min.js"></script>
+
 </head>
 <body>
 
@@ -72,7 +73,7 @@
                             <li class="shoping-cart">
                                 <a href="#">
                                     <i class="flaticon-shop"></i>
-                                    <span>3</span>
+                                    <span>15</span>
                                 </a>
                                 <div class="add-to-cart-product">
                                     <div class="cart-product">
@@ -85,7 +86,7 @@
                                             <p>
                                                 <span>1</span>
                                                 x
-                                                <a href="single-product.html">East of eden</a>
+                                                <a href="single-product.html">East of easdasdden</a>
                                             </p>
                                             <a href="single-product.html">S, Orange</a>
                                             <span class="cart-price">$ 140.00</span>
@@ -148,7 +149,7 @@
                 </div>
                 <div class="col-md-1 hidden-sm">
                     <div class="header-right">
-                        <ul>
+                        <ul id="shopping_cart">
                             <li class="shoping-cart" id="loghover">
                                 <a href="@Url.Action("Index","Account")"><i class="flaticon-people"></i></a>
                                 <div id="log-in-out">
@@ -170,66 +171,11 @@
                                 </div>
                             </li>
                             <li class="shoping-cart">
-                                <a href="#">
-                                    <i class="flaticon-shop"></i>
-                                    <span>0</span>
-                                </a>
-                                <div class="add-to-cart-product">
-                                    <div class="cart-product">
-                                        <div class="cart-product-image">
-                                            <a href="single-product.html">
-                                                <img src="~/Content/home-img/shop/1.jpg" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="cart-product-info">
-                                            <p>
-                                                <span>1</span>
-                                                x
-                                                <a href="single-product.html">East of eden</a>
-                                            </p>
-                                            <a href="single-product.html">S, Orange</a>
-                                            <span class="cart-price">$ 140.00</span>
-                                        </div>
-                                        <div class="cart-product-remove">
-                                            <i class="fa fa-times"></i>
-                                        </div>
-                                    </div>
-                                    <div class="cart-product">
-                                        <div class="cart-product-image">
-                                            <a href="single-product.html">
-                                                <img src="~/Content/home-img/shop/1.jpg" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="cart-product-info">
-                                            <p>
-                                                <span>1</span>
-                                                x
-                                                <a href="single-product.html">East of eden</a>
-                                            </p>
-                                            <a href="single-product.html">S, Orange</a>
-                                            <span class="cart-price">$ 140.00</span>
-                                        </div>
-                                        <div class="cart-product-remove">
-                                            <i class="fa fa-times"></i>
-                                        </div>
-                                    </div>
-                                    <div class="total-cart-price">
-                                        <div class="cart-product-line fast-line">
-                                            <span>Shipping</span>
-                                            <span class="free-shiping">$10.50</span>
-                                        </div>
-                                        <div class="cart-product-line">
-                                            <span>Total</span>
-                                            <span class="total">$ 140.00</span>
-                                        </div>
-                                    </div>
-                                    <div class="cart-checkout">
-                                        <a href="checkout.html">
-                                            Check out
-                                            <i class="fa fa-chevron-right"></i>
-                                        </a>
-                                    </div>
-                                </div>
+                                
+                                        @Html.Action("_CartButton", "Cart")
+                                        
+                             
+                                
                             </li>
                         </ul>
                     </div>

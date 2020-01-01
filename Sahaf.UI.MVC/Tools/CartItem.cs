@@ -13,6 +13,6 @@ namespace Sahaf.UI.MVC.Tools
         public string Writer { get; set; }
         public decimal Price { get; set; }
         public short Quantity { get; set; }
-        public decimal SubTotal { get; set; }
+        public decimal SubTotal { get { return Price * Quantity; }}
     }
 }

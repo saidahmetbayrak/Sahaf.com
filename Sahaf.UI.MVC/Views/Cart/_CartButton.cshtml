@@ -1,3 +1,58 @@
 ﻿
 @using Sahaf.UI.MVC.Tools
-@Html.ActionLink("Cart("+(Session["cart"] as MyCart).TotalAmount+")","Index","Cart" )
+@*@Html.ActionLink(((Session["cart"] as MyCart).TotalAmount).ToString(),"Index","Cart" )*@
+
+<a href="@Url.Action("Index","Cart")">
+
+    <i class="flaticon-shop"></i>
+
+    <span>
+        @Html.Label(((Session["cart"] as MyCart).TotalAmount).ToString())
+        @*@Html.ActionLink(((Session["cart"] as MyCart).TotalAmount).ToString(),"Index","Cart" )*@
+
+    </span>
+</a>
+<div class="add-to-cart-product">
+
+    @using Sahaf.UI.MVC.Tools
+    @{
+        decimal totalPrice = 0;
+    }
+
+    @foreach (Sahaf.UI.MVC.Tools.CartItem item in (Session["cart"] as Sahaf.UI.MVC.Tools.MyCart).GetAllCartItem)
+    {
+        <div class="cart-product">
+            <div class="cart-product-image">
+                <a href="single-product.html">
+                    <img src="~/Content/home-img/shop/1.jpg" alt="">
+                </a>
+            </div>
+            <div class="cart-product-info">
+                <p>
+                    <span>@item.Quantity</span>
+                    x
+                    <a href="single-product.html">@item.BookName</a>
+                </p>
+
+                <span class="cart-price">$@item.Price</span>
+            </div>
+            <div class="cart-product-remove">
+                <i class="fa fa-times"></i>
+            </div>
+        </div>
+        totalPrice += item.SubTotal;
+    }
+    <div class="total-cart-price">
+
+        <div class="cart-product-line">
+            <span>Total</span>
+            <span class="total">$ @totalPrice</span>
+        </div>
+    </div>
+    <div class="cart-checkout">
+        <a href="@Url.Action("Index","Cart")">
+            Detay Sayfası
+            <i class="fa fa-chevron-right"></i>
+        </a>
+    </div>
+</div>

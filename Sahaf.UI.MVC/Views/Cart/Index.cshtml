@@ -4,67 +4,23 @@
 }
 
 <!-- Cart Area Start -->
-<div class="shopping-cart-area section-padding">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="wishlist-table-area table-responsive">
-                    @Html.Action("_CartList", "Cart")
-                </div>
-                <div class="shopingcart-bottom-area">
-                    <a class="left-shoping-cart" href="#">CONTINUE SHOPPING</a>
-                    <div class="shopingcart-bottom-area pull-right">
-                        <a class="right-shoping-cart" href="#">CLEAR SHOPPING CART</a>
-                        <a class="right-shoping-cart" href="#">UPDATE SHOPPING CART</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+
+@Html.Action("_CartList", "Cart")
+
 <!-- Cart Area End -->
 <!-- Discount Area Start -->
-<div class="discount-area">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 col-sm-6">
-                <div class="discount-main-area">
-                    <div class="discount-top">
-                        <h3>DISCOUNT CODE</h3>
-                        <p>Enter your coupon code if have one</p>
-                    </div>
-                    <div class="discount-middle">
-                        <input type="text" placeholder="">
-                        <a class="" href="#">APPLY COUPON</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-sm-6">
-                <div class="subtotal-main-area">
-                    <div class="subtotal-area">
-                        <h2>SUBTOTAL<span>$ 200</span></h2>
-                    </div>
-                    <div class="subtotal-area">
-                        <h2>GRAND TOTAL<span>$ 200</span></h2>
-                    </div>
-                    <a href="#">CHECKOUT</a>
-                    <p>Checkout With Multiple Addresses</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+
 <!-- Discount Area End -->
 @section scripts
 {
     <script>
-        @*function CartUpdate(deger,gid) {
+        function CartUpdate(deger,gid) {
             $.ajax({
                 type: "Get",
                 url: '@Url.Action("UpdateCart","Cart")',
-                data: { amount: deger, id: gid },
+                data: { quantity: deger, id: gid },
                 success: function (data) {
-                    $("#dvSepet").html(data);
+                    $("#dvBasket").html(data);
                 }
 
 
@@ -72,19 +28,19 @@
         }
 
         function DeleteItemCart(gid) {
-            var cvp = confirm("Ürünü Sepetten Çıkarmak İstediğinize Eminmisiniz?")
+            var cvp = confirm("Kitabı Sepetten Çıkarmak İstediğinize Eminmisiniz?")
             if (cvp) {
                 $.ajax({
                     type: "Get",
                     url: '@Url.Action("DeleteItemCart","Cart")',
                     data: { id: gid },
                     success: function (data) {
-                        $("#dvSepet").html(data);
+                        $("#dvBasket").html(data);
                     }
 
                 })
             }
-        }*@
+        }
 
         function AddToMyCart(aid) {
             $.ajax({
