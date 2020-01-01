@@ -52,14 +52,17 @@
                             <li class="shoping-cart" id="loghover">
                                 <a href="@Url.Action("Index","Account")"><i class="flaticon-people"></i></a>
                                 <div id="log-in-out">
+                                    @if (Session["Kullanici"] == null)
+                                    {
+                                        <div class="cart-checkout">
+                                            <a href="@Url.Action("Login","Account")">
+                                                Giriş
+                                                <i class="fa fa-chevron-right"></i>
+                                            </a>
+                                        </div>
+                                    }
                                     <div class="cart-checkout">
-                                        <a href="checkout.html">
-                                            Giriş
-                                            <i class="fa fa-chevron-right"></i>
-                                        </a>
-                                    </div>
-                                    <div class="cart-checkout">
-                                        <a href="checkout.html">
+                                        <a href="@Url.Action("Logout","Account")">
                                             Çıkış
                                             <i class="fa fa-chevron-right"></i>
                                         </a>
@@ -149,12 +152,15 @@
                             <li class="shoping-cart" id="loghover">
                                 <a href="@Url.Action("Index","Account")"><i class="flaticon-people"></i></a>
                                 <div id="log-in-out">
-                                    <div class="cart-checkout">
-                                        <a href="@Url.Action("Login","Account")">
-                                            Giriş
-                                            <i class="fa fa-chevron-right"></i>
-                                        </a>
-                                    </div>
+                                    @if (Session["Kullanici"] == null)
+                                    {
+                                        <div class="cart-checkout">
+                                            <a href="@Url.Action("Login","Account")">
+                                                Giriş
+                                                <i class="fa fa-chevron-right"></i>
+                                            </a>
+                                        </div>
+                                    }
                                     <div class="cart-checkout">
                                         <a href="@Url.Action("Logout","Account")">
                                             Çıkış
@@ -252,4 +258,4 @@
         </div>
     </div>
     <!-- Mobile Menu End -->
-   
+
