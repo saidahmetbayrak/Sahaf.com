@@ -2018,7 +2018,8 @@
     <Compile Include="Controllers\BooksController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="CustomFilters\CustomFilter.cs" />
+    <Compile Include="FiltersCustom\AdminAuthorize.cs" />
+    <Compile Include="FiltersCustom\AuthorizeAttr.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -2040,6 +2041,7 @@
     <Content Include="Views\Home\_GetAdverts.cshtml" />
     <Content Include="Views\Home\_GetAdvertForModal.cshtml" />
     <Content Include="Views\Books\_GetAdvertForModal.cshtml" />
+    <Content Include="Views\Account\Error.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

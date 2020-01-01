@@ -1,5 +1,6 @@
 ﻿using Sahaf.BLL.Abstract;
 using Sahaf.Model.Entities;
+using Sahaf.UI.MVC.FiltersCustom;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,7 +16,7 @@ namespace Sahaf.UI.MVC.Controllers
         {
             userService = user;
         }
-
+        [AuthorizeAttr]
         // GET: Account
         public ActionResult Index()
         {
@@ -64,6 +65,11 @@ namespace Sahaf.UI.MVC.Controllers
             //    return View();
             //}
             return RedirectToAction("Login", "Account");
+        }
+
+        public ActionResult Error()
+        {
+            return View();
         }
 
         public ActionResult MyAdverts()

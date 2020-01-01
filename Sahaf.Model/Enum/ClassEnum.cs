@@ -32,6 +32,7 @@ namespace Sahaf.Model.Enum
     public enum Roles
     {
         User=1,
-        Antiquarian=2
+        Antiquarian=2,
+        Admin=3
     }
 }
