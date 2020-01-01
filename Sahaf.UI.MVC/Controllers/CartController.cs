@@ -39,6 +39,14 @@ namespace Sahaf.UI.MVC.Controllers
             cartItem.BookName = eklenenUrun.BookName;
             cartItem.Writer = eklenenUrun.Writer;
             cartItem.Price = eklenenUrun.Price;
+            if (string.IsNullOrEmpty(eklenenUrun.AdvertİmgUrl))
+            {
+                cartItem.ImageUrl = null;
+            }
+            else
+            {
+                cartItem.ImageUrl = eklenenUrun.AdvertİmgUrl;
+            }
             cartItem.Quantity = 1;
 
             //cartItem.SubTotal

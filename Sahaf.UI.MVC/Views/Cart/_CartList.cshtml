@@ -29,7 +29,14 @@
                                     </td>
                                     <td class="product-image">
                                         <a href="#">
-                                            <img src="~/Content/home-img/shop/1.jpg" alt="">
+                                            @if (string.IsNullOrEmpty(item.ImageUrl))
+                                            {
+                                                <img src="~/Content/home-img/featured/1.jpg" alt="@item.BookName" width="80" height="80">
+                                            }
+                                            else
+                                            {
+                                                <img src="@Url.Content(item.ImageUrl)" alt="@item.BookName" width="80" height="80" multiple />
+                                            }
                                         </a>
                                     </td>
                                     <td class="t-product-name">
@@ -43,13 +50,13 @@
                                         </p>
                                     </td>
                                     <td class="product-unit-price">
-                                        <p>@item.Price</p>
+                                        <p>&#8378; @item.Price</p>
                                     </td>
                                     <td class="product-quantity product-cart-details">
                                         <input type="number" value="@item.Quantity" min="0" onchange="CartUpdate(this.value,@item.ID)">
                                     </td>
                                     <td class="product-quantity">
-                                        <p>$@item.SubTotal</p>
+                                        <p>&#8378; @item.SubTotal</p>
                                     </td>
                                 </tr>
 
@@ -90,7 +97,7 @@
                     <div class="subtotal-area">
                         <h2>
                             SUBTOTAL<span>
-                                @((Session["cart"] as Sahaf.UI.MVC.Tools.MyCart).GetAllCartItem.Sum(x => x.SubTotal).ToString("C2"))
+                                @((Session["cart"] as MyCart).GetAllCartItem.Sum(x => x.SubTotal).ToString("C2"))
                             </span>
                         </h2>
                     </div>

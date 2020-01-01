@@ -21,9 +21,8 @@
                 data: { quantity: deger, id: gid },
                 success: function (data) {
                     $("#dvBasket").html(data);
+                    location.reload();
                 }
-
-
             })
         }
 
@@ -37,7 +36,6 @@
                     success: function (data) {
                         $("#dvBasket").html(data);
                     }
-
                 })
             }
         }

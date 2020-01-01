@@ -1,15 +1,10 @@
 ﻿
-@using Sahaf.UI.MVC.Tools
-@*@Html.ActionLink(((Session["cart"] as MyCart).TotalAmount).ToString(),"Index","Cart" )*@
-
 <a href="@Url.Action("Index","Cart")">
 
     <i class="flaticon-shop"></i>
 
     <span>
         @Html.Label(((Session["cart"] as MyCart).TotalAmount).ToString())
-        @*@Html.ActionLink(((Session["cart"] as MyCart).TotalAmount).ToString(),"Index","Cart" )*@
-
     </span>
 </a>
 <div class="add-to-cart-product">
@@ -19,12 +14,19 @@
         decimal totalPrice = 0;
     }
 
-    @foreach (Sahaf.UI.MVC.Tools.CartItem item in (Session["cart"] as Sahaf.UI.MVC.Tools.MyCart).GetAllCartItem)
+    @foreach (CartItem item in (Session["cart"] as MyCart).GetAllCartItem)
     {
         <div class="cart-product">
             <div class="cart-product-image">
                 <a href="single-product.html">
-                    <img src="~/Content/home-img/shop/1.jpg" alt="">
+                    @if (string.IsNullOrEmpty(item.ImageUrl))
+                    {
+                        <img src="~/Content/home-img/featured/1.jpg" alt="@item.BookName" width="80" height="80">
+                    }
+                    else
+                    {
+                        <img src="@Url.Content(item.ImageUrl)" alt="@item.BookName" width="80" height="80" multiple />
+                    }
                 </a>
             </div>
             <div class="cart-product-info">
@@ -46,7 +48,7 @@
 
         <div class="cart-product-line">
             <span>Total</span>
-            <span class="total">$ @totalPrice</span>
+            <span class="total">&#8378; @totalPrice</span>
         </div>
     </div>
     <div class="cart-checkout">
